@@ -1,0 +1,20 @@
+.categories {
+  margin: 20px;
+}
+
+.categories ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.categories li {
+  margin-bottom: 10px;
+}
+
+.categories form {
+  margin-top: 20px;
+}
+
+.categories input {
+  margin-right: 10px;
+}

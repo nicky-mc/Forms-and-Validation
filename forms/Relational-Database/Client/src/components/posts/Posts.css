@@ -1,0 +1,25 @@
+.posts {
+  margin: 20px;
+}
+
+.posts ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.posts li {
+  margin-bottom: 10px;
+}
+
+.posts form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.posts input,
+.posts textarea,
+.posts select {
+  margin-bottom: 10px;
+}
