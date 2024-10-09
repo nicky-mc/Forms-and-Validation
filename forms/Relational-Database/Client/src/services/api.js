@@ -30,6 +30,20 @@ export const createPost = async (title, content, category_id) => {
   return response.json();
 };
 
+// Add the deletePost function
+export const deletePost = async (postId) => {
+  const response = await fetch(`${API_BASE_URL}/posts/${postId}`, {
+    method: "DELETE",
+  });
+
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+
+  const text = await response.text();
+  return text ? JSON.parse(text) : {};
+};
+
 // Tags
 export const getTags = async () => {
   const response = await fetch(`${API_BASE_URL}/tags`);
