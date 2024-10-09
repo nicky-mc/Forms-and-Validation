@@ -36,3 +36,4 @@ app.get("/", (req, res) => {
 });
 // we can use thunder client to ensure our server is working
 // we can now run our server using node server.js
+// now we create the functions to get all the data from the database so our client can use it.
