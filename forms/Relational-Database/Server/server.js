@@ -231,7 +231,7 @@ app.post("/api/posts/:postId/tags", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
-
+// the below code is to delete a tag from a post by its id
 app.delete("/api/posts/:postId/tags/:tagId", async (req, res) => {
   const { postId, tagId } = req.params;
   try {
