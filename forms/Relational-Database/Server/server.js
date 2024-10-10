@@ -198,7 +198,8 @@ app.put("/api/tags/:id", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
-
+// params is used to get the id of the tag to be deleted
+//this is a dynamic parameter
 app.delete("/api/tags/:id", async (req, res) => {
   const { id } = req.params;
   try {
