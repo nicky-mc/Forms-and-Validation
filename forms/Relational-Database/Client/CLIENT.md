@@ -31,7 +31,7 @@ The main component of the application, responsible for rendering the list of pos
 - `tags`: Array of tag objects
 - `newPost`: Object representing the form data for a new post
 
-#### Functions
+#### API Functions
 
 - `fetchPosts()`: Retrieves all posts from the API
 - `fetchCategories()`: Retrieves all categories from the API
