@@ -166,7 +166,7 @@ app.get("/api/tags", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
-
+//  the below code is to create a new tag in the database
 app.post("/api/tags", async (req, res) => {
   const { name } = req.body;
   try {
