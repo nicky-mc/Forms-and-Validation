@@ -235,16 +235,19 @@ app.post("/api/posts/:postId/tags", async (req, res) => {
 // the below code is to delete a tag from a post by its id
 app.delete("/api/posts/:postId/tags/:tagId", async (req, res) => {
   const { postId, tagId } = req.params;
+  // try to delete the tag from the post
   try {
     const result = await db.query(
       "DELETE FROM posts_tags WHERE post_id = $1 AND tag_id = $2 RETURNING *",
       [postId, tagId]
     );
+    //if the tag is not found
     if (result.rows.length === 0) {
       return res.status(404).json({ error: "Post-Tag relationship not found" });
     }
     res.status(204).send();
   } catch (error) {
+    // then catch the error
     console.error("Error removing tag from post:", error);
     res.status(500).json({ error: "Internal Server Error" });
   }
